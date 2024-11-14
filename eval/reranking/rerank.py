@@ -85,7 +85,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--retrieval_results_file", type=str, required=True)
 
-    parser.add_argument("--model", type=str, help="Simulator LLM", default="gpt-4-1106-preview")
+    parser.add_argument("--model", type=str, help="Simulator LLM", default="gpt-4o-mini")
     parser.add_argument("--max_k", default=100, type=int, help="Max number of retrieved documents to rerank")
     parser.add_argument("--output_dir", type=str, required=False, default="results/reranking/")
     parser.add_argument("--dataset_path", required=False, default="princeton-nlp/LitSearch")
