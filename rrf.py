@@ -68,12 +68,12 @@ def rerankrrf(files_list):
         print("Error: Length of files are not equal")
 
     with open(
-        "LitSearch.title_abstract.bm25.ggpt4o.grit.reranked_test.jsonl", "w"
+        "combined.jsonl", "w"
     ) as f:
         pass
 
     with open(
-        "LitSearch.title_abstract.bm25.ggpt4o.grit.reranked_test.jsonl", "a"
+        "combined.jsonl", "a"
     ) as f:
 
         for i, line in enumerate(list_files[0]):
@@ -95,9 +95,9 @@ def rerankrrf(files_list):
 
 rerankrrf(
     [
-        "/Users/ajinkya/Documents/CMU/fall24/anlp/LitSearch/results/reranking/LitSearch.title_abstract.grit.reranked_gptmini.jsonl",
-        "/Users/ajinkya/Documents/CMU/fall24/anlp/LitSearch/LitSearch.conclusion.grit.jsonl",
-        "/Users/ajinkya/Documents/CMU/fall24/anlp/LitSearch/LitSearch.introduction.grit.jsonl",        
+        "LitSearch.title_abstract.grit.reranked_gptmini.jsonl",
+        "LitSearch.conclusion.grit.jsonl",
+        "LitSearch.introduction.grit.jsonl",        
         "grit_scores.jsonl",
     ]
 )
